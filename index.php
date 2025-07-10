@@ -1,22 +1,24 @@
 <?php 
-include ('connect.php');
+$con=mysqli_connect('localhost','root','','hotel');
+// if($con){
+//     echo  "connected to database";
+// }
+// else echo "unable to connect to database";
 if(isset($_POST['submit'])){
-    $first_Name=$_POST['firstName'];
-    $last_Name=$_POST['lastName'];
-    $contact_Number=$_POST['phonenumber'];
-    $alt_Number=$_POST['altNum'];
-    $address=$_POST['address'];
-    // $room_no=$_POST['roomNumber'];
-    // $quantity=$_POST['quantity'];
-    // $time=$_POST['time'];
-    // $date=$_POST['date'];
-    $sql="INSERT INTO CUSTOMER VALUES ('$first_Name','$last_Name','$contact_Number','$alt_Number','$address')";
-    if(mysqli_query($con,$sql)){
-        echo "data is insertes";
-    }
-    else 
-    echo "data is not inserted";
-
+   $firstname=$_POST['firstName'];
+   $lastname=$_POST['lastName'];
+   $cont=$_POST['phonenumber'];
+   $altNum=$_POST['altNum'];
+   $address=$_POST['address'];
+   $roomNum=$_POST['room_no'];
+   $quantity=$_POST['quantity'];
+   $time=$_POST['time'];
+   $date=$_POST['date'];
+   $sql="INSERT INTO customer VALUES ('$firstname','$lastname','$cont','$altNum','$address','$roomNum','$quantity','$time','$date')";
+   if(mysqli_query($con,$sql)){
+    echo '<script>alert("data inserted")</script>';
+   }
+   else 'data not inserted';
 }
 
 ?>
@@ -42,8 +44,8 @@ if(isset($_POST['submit'])){
                  <p>Miklajung-2,  Saptami Bazar, Panchter</p>
            </div>
            <div class="nav">
-                <li><a href="index.html">Fill Details</a></li>
-                <li><a href="#">See  Details</a></li>
+                <li><a href="index.php">Fill Details</a></li>
+                <li><a href="seedetail.php">See  Details</a></li>
            </div>
 
         </div>
@@ -52,7 +54,7 @@ if(isset($_POST['submit'])){
         <div class="fillDetails">
             <h3>Persional Details</h3>
             <div class="form">
-                <form action="" method="POST">
+                <form action="" method="POST" class='form'>
                     <p>First Name:</p>
                     <input type="text" placeholder="Ram " name="firstName" required>
                     <p>Last Name:</p>
@@ -62,41 +64,44 @@ if(isset($_POST['submit'])){
                     <p>Alternative Phone Number:</p>
                     <input type="number" placeholder="97025******" name="altNum">
                     <p>Adderss:</p>
-                    <input type="text" name="address">
-                    <!-- <textarea  name="address" required placeholder="Prenament Address"></textarea> -->
-                      <!-- <form action="" method="POST"> -->
-                    <!-- <p>Room Number:</p>
-                    <select name="roomNumber" id="">
-                        <option value="">1001</option>
-                        <option value="">1002</option>
-                        <option value="">1003</option>
-                        <option value="">1004</option>
-                        <option value="">1005</option>
+                    <!-- <input type="text" name="address"> -->
+                    <textarea  name="address" required placeholder="Prenament Address"></textarea> 
+                    <div class="form">
+                         <p>Room Number:</p>
+                    <select  id="" name="room_no">
+                        <option value="">Select Room Number</option>
+                        <option value="" >1001</option>
+                        <option value="" >1002</option>
+                        <option value="" >1003</option>
+                        <option value="" >1004</option>
+                        <option value="" >1005</option>
                     </select>
                     <p>Number Of Person:</p>
                     <select name="quantity" id="">
-
+                        <option value="">Quantity</option>
                         <option value="">1</option>
                         <option value="">2</option>
                         <option value="">3</option>
                         <option value="">4</option>
                         <option value="">5</option>
-                    </select> -->
-                    <!-- <p>Time:</p>
+                    </select>
+                     <p>Time:</p>
                     <input type="time" name="time">
                     <p>Date:</p>
-                    <input type="date" name ="date">  -->
-                    <input type="submit" name="submit" id="btn">
-                     <!-- <button name="submit">Submit</button> -->
+                    <input type="date" name ="date"> 
+                    <!-- <input type="submit" name="submit" id="btn"> -->
+                     <button name="submit">Submit</button>
+                    </div>
+                    
                 
                 </form>
             </div>
         </div>
    </div>
-   <div class="container">
+   <!-- <div class="container">
         <div class="fillDetails">
             <h3>Room Details</h3>
-            <div class="form">
+            <div class="form"> -->
                 <!-- <form action="" method="POST">
                     <p>Room Number:</p>
                     <select name="roomNumber" id="">
@@ -120,10 +125,10 @@ if(isset($_POST['submit'])){
                     <p>Date:</p>
                     <input type="date" name ="date"> 
                     <input type="submit" name="submit" id="btn"> -->
-                     <!-- <button name="submit">Submit</button> --> -->
-                </form>
+                     <!-- <button name="submit">Submit</button> --> 
+                <!-- </form>
             </div>
-        </div>
+        </div> -->
    </div>
 </body>
 </html>

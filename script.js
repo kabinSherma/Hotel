@@ -1,0 +1,1 @@
+alert('There is no data in database');
