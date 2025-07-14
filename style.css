@@ -15,6 +15,7 @@
 .container{
     margin: 0px 50px;
     
+    
 }
 li{
     list-style: none;
@@ -25,7 +26,7 @@ a{
 
 /* --------nav bar------ */
 .navHeading{
-    text-align: center;
+    /* text-align: center; */
     padding: 20px;
 }
 .navHeading p{
@@ -71,7 +72,7 @@ a{
     height: auto;
     padding: 20px;
     margin-bottom: 20px;
-    text-align: right;
+    /* text-align: left; */
     /* width: 100%; */
 }
 .form{
@@ -80,8 +81,10 @@ a{
     flex-basis: 50%;
     flex-wrap: wrap;
     gap: 5px;
+    
     /* margin-bottom: 50px; */
 }
+
 .fillDetails h3{
     margin-bottom:20px;
 }
@@ -92,10 +95,12 @@ form input{
     border-left: none;
     border-top: none;
     margin-bottom: 10px;
+    
 }
 form p{
-    font-size:1.2rem;
-    margin:10px 0px;
+    font-size:12rem;
+    /* margin:10px 0px; */
+    /* text-align: start; */
 }
 textarea{
     padding: 10px;

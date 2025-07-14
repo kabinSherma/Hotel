@@ -15,7 +15,7 @@ $sql="  SELECT * FROM customer";
 $result=mysqli_query($con,$sql);
 if(mysqli_num_rows($result)>0){
     echo "<table>
-    <tr> <th>First Name</th><th>Last Name</th><th>Contact Number</th><th>Address</th><th>Room Number</th><th>Quantiry</th><th>Date</th> </tr>
+    <tr> <th>First Name</th><th>Last Name</th><th>Contact Number</th><th>Address</th><th>Room Number</th><th>Quantity</th><th>Date</th> </tr>
     "; 
     while($rows=mysqli_fetch_assoc($result)){
         echo "

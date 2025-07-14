@@ -70,20 +70,20 @@ if(isset($_POST['submit'])){
                          <p>Room Number:</p>
                     <select  id="" name="room_no">
                         <option value="">Select Room Number</option>
-                        <option value="" >1001</option>
-                        <option value="" >1002</option>
-                        <option value="" >1003</option>
-                        <option value="" >1004</option>
-                        <option value="" >1005</option>
+                        <option value="1001" >1001</option>
+                        <option value="1002" >1002</option>
+                        <option value="1003" >1003</option>
+                        <option value="1004" >1004</option>
+                        <option value="1005" >1005</option>
                     </select>
                     <p>Number Of Person:</p>
                     <select name="quantity" id="">
                         <option value="">Quantity</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                      <p>Time:</p>
                     <input type="time" name="time">
